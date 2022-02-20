@@ -66,4 +66,7 @@ dependencies {
     // viewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$viewModelVersion")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$viewModelVersion")
+
+    //realm
+//    compileOnly("io.realm.kotlin:library:0.9.0")
 }

@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     kotlin("plugin.serialization")
+    id("io.realm.kotlin") version "0.9.0"
 }
 val ktorVersion = "1.6.7"
 kotlin {
@@ -27,6 +28,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
                 implementation("io.ktor:ktor-client-logging:$ktorVersion")
                 implementation("io.github.aakira:napier:2.4.0")
+                implementation("io.realm.kotlin:library-base:0.9.0")
             }
         }
         val commonTest by getting {

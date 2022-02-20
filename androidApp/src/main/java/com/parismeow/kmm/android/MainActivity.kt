@@ -2,7 +2,6 @@ package com.parismeow.kmm.android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.parismeow.kmm.Greeting
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.Image
@@ -21,10 +20,6 @@ import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.parismeow.kmm.MovieInfo
-
-fun greet(): String {
-    return Greeting().greeting()
-}
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                     .fillMaxWidth()
                     .padding(horizontal = 8.dp), horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(text = item.title, modifier = Modifier.padding(top = 20.dp))
+                item.title?.let { Text(text = it, modifier = Modifier.padding(top = 20.dp)) }
                 Text(text = item.rating.toString(), modifier = Modifier.padding(top = 20.dp))
             }
         }
