@@ -7,7 +7,7 @@ A Movie app built with `KMM + Realm`.
 ## Build
 
 - App uses `TMDB API` as data source.
-- Set the API key in MovieRemoteClient.kt under `shared/commonMain`
+- Set the API key in `MovieRemoteClient.kt` under `shared/commonMain`
 
 ## Screenshots
 
